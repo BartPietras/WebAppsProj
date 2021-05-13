@@ -1,0 +1,17 @@
+extends layout
+block content
+	h1 Lista
+	table
+		tr
+			th Lp
+			th Marka
+
+		each car, index in carsList
+			tr
+				td=index+1
+				td=car.brand
+
+				td
+					a(href="/delete_dealer/"+car.id) usuń
+				td
+					a(href="/edit_dealer/"+car.id) edytuj

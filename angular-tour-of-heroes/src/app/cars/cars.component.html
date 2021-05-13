@@ -1,0 +1,21 @@
+<h2>My Cars</h2>
+
+<div>
+  <label for="new-car">Car model: </label>
+  <input id="new-car" #carModel />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="add-button" (click)="add(carModel.value); carModel.value=''">
+    Add car
+  </button>
+</div>
+
+<ul class="cars">
+  <li *ngFor="let car of cars">
+    <a routerLink="/car-detail/{{car.id}}">
+      <span class="badge">{{car.id}}</span> {{car.brand}} {{car.model}} ({{car.year}})
+    </a>
+    <button class="delete" title="delete car"
+      (click)="delete(car)">x</button>
+  </li>
+</ul>

@@ -1,0 +1,12 @@
+<h2>Top Cars</h2>
+<div class="heroes-menu">
+  <a *ngFor="let car of cars"
+      routerLink="/car-detail/{{car.id}}">
+      {{car.brand}} {{car.model}}
+  </a>
+</div>
+
+
+<app-hero-search></app-hero-search>
+<app-car-search></app-car-search>
+<app-car-dealer-search></app-car-dealer-search>

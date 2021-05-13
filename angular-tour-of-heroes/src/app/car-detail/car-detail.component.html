@@ -1,0 +1,14 @@
+<div *ngIf="car">
+  <h2>{{car.model | uppercase}} Details</h2>
+  <div><span>id: </span>{{car.id}}</div><br>
+  <div>
+  	<label for="car-brand">Car brand: </label><br>
+    <input id="car-brand" [(ngModel)]="car.brand" placeholder="brand"><br><br>
+	<label for="car-model">Car model: </label><br>
+    <input id="car-model" [(ngModel)]="car.model" placeholder="model"><br><br>
+	<label for="car-year">Car year: </label><br>
+    <input id="car-year" [(ngModel)]="car.year" placeholder="year"><br><br>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>

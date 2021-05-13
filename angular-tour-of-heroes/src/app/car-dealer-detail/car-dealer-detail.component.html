@@ -1,0 +1,11 @@
+<div *ngIf="carDealer">
+
+  <h2>{{carDealer.brand | uppercase}} Details</h2>
+  <div><span>id: </span>{{carDealer.id}}</div><br>
+  <div>
+  	<label for="carDealer-brand">Car dealer brand: </label><br>
+    <input id="carDealer-brand" [(ngModel)]="carDealer.brand" placeholder="brand"><br><br>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>

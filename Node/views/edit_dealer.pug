@@ -1,0 +1,11 @@
+extends layout
+block content
+	h1 Dodawanie
+	form(method="post" action="/edit_dealer/"+id)
+		label Marka
+		br
+		input(type="text" name="brand" value=brand)
+		br
+		input(type="submit" value="Potwierdź")
+		if message!=''
+			p #{message}
